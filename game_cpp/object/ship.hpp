@@ -12,6 +12,5 @@ public:
     virtual void update(float dt) override;
     virtual void keyPressed(int key) override;
     virtual void keyReleased(int key) override;
-    virtual void mouseClicked(Vector2 worldPosition, bool isLeftButton) override;
 };
 

@@ -23,6 +23,7 @@ public:
     void setAngle(const float a);
     Vector2 getPosition();
     float getAngle();
+    Vector2 getForwardVector();
 
 protected:
     scene::Mesh *mesh;
@@ -44,7 +45,6 @@ public:
     ControlledEntity() = default;
     virtual void keyPressed(int key) = 0;
     virtual void keyReleased(int key) = 0;
-    virtual void mouseClicked(Vector2 worldPosition, bool isLeftButton) = 0;
 
 protected:
     bool input[game::KEY_COUNT];

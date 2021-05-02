@@ -1,7 +1,5 @@
 #include "target.hpp"
 
-#include "../../framework/game.hpp"
-
 Target::Target()
 {
     mesh = nullptr;

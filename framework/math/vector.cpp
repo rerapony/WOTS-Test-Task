@@ -48,3 +48,8 @@ float distance(const Vector2 & first, const Vector2 & second)
 {
     return std::sqrt(std::pow(first.x - second.x, 2) + std::pow(first.y - second.y, 2));
 }
+
+float dotProduct(const Vector2 & first, const Vector2 & second)
+{
+    return first.x * second.x + first.y + second.y;
+}

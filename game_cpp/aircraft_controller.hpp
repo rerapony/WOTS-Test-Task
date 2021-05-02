@@ -14,13 +14,15 @@ public:
     virtual void update(float dt) override;
 
     void placeAircraft();
-    void setTarget(Target* e);
-    void setShip(Ship* s);
+    void Initialize(Target* target, Ship* ship);
+    bool getIsInitialized();
 
 private:
     Aircraft aircrafts[params::aircraft::AIRCRAFT_NUM];
+    float time_delays[params::aircraft::AIRCRAFT_NUM];
     Ship* ship;
     Target* target;
     size_t aircraftNum;
+    bool isInitialized;
 };
 

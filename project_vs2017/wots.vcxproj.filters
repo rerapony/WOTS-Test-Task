@@ -13,6 +13,9 @@
     <Filter Include="Engine\Math">
       <UniqueIdentifier>{bc7eb483-8552-44d9-b853-137021a4f04d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Object">
+      <UniqueIdentifier>{b47bd86a-04ca-45ae-9c19-d5e1c9b7a373}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\framework\engine.cpp">
@@ -20,9 +23,6 @@
     </ClCompile>
     <ClCompile Include="..\framework\scene.cpp">
       <Filter>Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\game_cpp\game.cpp">
-      <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="..\game_cpp\main.cpp">
       <Filter>Game</Filter>
@@ -33,9 +33,21 @@
     <ClCompile Include="..\framework\math\vector.cpp">
       <Filter>Engine\Math</Filter>
     </ClCompile>
-    <ClCompile Include="ship.cpp" />
-    <ClCompile Include="Aircraft.cpp" />
-    <ClCompile Include="aircraft_controller.cpp" />
+    <ClCompile Include="..\game_cpp\object\ship.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_cpp\aircraft_controller.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_cpp\game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_cpp\object\aircraft.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\game_cpp\object\target.cpp">
+      <Filter>Game\Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\framework\engine.hpp">
@@ -53,8 +65,20 @@
     <ClInclude Include="..\framework\math\vector.hpp">
       <Filter>Engine\Math</Filter>
     </ClInclude>
-    <ClInclude Include="Aircraft.h" />
-    <ClInclude Include="aircraft_controller.hpp" />
-    <ClInclude Include="ship.hpp" />
+    <ClInclude Include="..\game_cpp\object\ship.hpp">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_cpp\aircraft_controller.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_cpp\common.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_cpp\object\aircraft.hpp">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\game_cpp\object\target.hpp">
+      <Filter>Game\Object</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

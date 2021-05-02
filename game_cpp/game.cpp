@@ -18,6 +18,10 @@ namespace game
 		ship.init();
         aircraftController.init();
         target.init();
+
+        if (!aircraftController.getIsInitialized()) {
+            aircraftController.Initialize(&target, &ship);
+        }
 	}
 
 
@@ -59,7 +63,9 @@ namespace game
             target.setPosition(worldPosition);
         }
         else {
-            aircraftController.placeAircraft();
+            if (aircraftController.getIsInitialized()) {
+                aircraftController.placeAircraft();
+            }
         }
 	}
 }

@@ -12,16 +12,21 @@ public:
     virtual void update(float dt) override;
     
     void setTarget(PhysicalEntity* entity);
+
     bool getIsFlying();
+
     bool getIsReturning();
     void setIsReturning(const bool);
+
     float getTime();
 
 private:
     PhysicalEntity* target;
     bool isFlying;
-    bool isReturning;
+    bool isLanding;
     float time;
+    float linearSpeed;
     int randomTurnDir;
+    float randomAngularMult;
 };
 

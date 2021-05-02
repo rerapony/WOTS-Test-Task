@@ -1,8 +1,6 @@
 #include "entity.hpp"
 
-PhysicalEntity::PhysicalEntity(): mesh(nullptr), position(0, 0), angle(0)
-{
-}
+#include <cmath>
 
 void PhysicalEntity::setPosition(const Vector2& p) {
     position = p;
@@ -20,4 +18,10 @@ Vector2 PhysicalEntity::getPosition()
 float PhysicalEntity::getAngle()
 {
     return angle;
+}
+
+Vector2 PhysicalEntity::getForwardVector()
+{
+    return Vector2(std::cos(angle), std::sin(angle));
+
 }

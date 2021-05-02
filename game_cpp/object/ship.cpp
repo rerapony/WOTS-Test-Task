@@ -3,7 +3,6 @@
 #include <cassert>
 #include <cmath>
 
-#include "../../framework/game.hpp"
 #include "../common.hpp"
 
 Ship::Ship()
@@ -72,8 +71,4 @@ void Ship::keyReleased(int key)
 {
     assert(key >= 0 && key < game::KEY_COUNT);
     input[key] = false;
-}
-
-void Ship::mouseClicked(Vector2 worldPosition, bool isLeftButton)
-{
 }

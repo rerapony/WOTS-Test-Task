@@ -1,5 +1,12 @@
 #pragma once
 
+const float PI = 3.14159265359f;
+
+inline float degToRad(float degree)
+{
+    return (degree * (PI / 180));
+}
+
 class Vector2
 {
 public:
@@ -21,4 +28,4 @@ Vector2 operator * (float left, Vector2 const &right);
 
 float distance(const Vector2& first, const Vector2& second);
 
-Vector2 crossProduct(const Vector2& first, const Vector2& second);
+float dotProduct(const Vector2& first, const Vector2& second);
